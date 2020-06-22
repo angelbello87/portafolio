@@ -1,5 +1,3 @@
-
-
   #navbar {
     overflow: hidden;    
     text-align: center;
@@ -13,10 +11,6 @@
     font-size: 17px;
   }
   
-  .content {
-    padding: 16px;
-  }
-
   .sticky
   {
       position: sticky;

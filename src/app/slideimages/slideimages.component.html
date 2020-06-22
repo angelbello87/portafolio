@@ -1,30 +1,15 @@
-<mat-card class="title">
-  <mat-card-header >
-      <mat-card-title>{{title}}</mat-card-title>
-      <mat-card-subtitle>{{comment}}</mat-card-subtitle>
-  </mat-card-header>
-  
+<mat-card style="text-align:center">
+      <mat-card-title >{{title}}</mat-card-title>
+      <mat-card-subtitle>{{comment}}</mat-card-subtitle>  
   <mat-card-content>
-    <div class="slideshow-container">
+    <div class="slideshow-container" >
   
-      <div class="mySlides fade">
+      <div class="mySlides fade" *ngFor="let pic of imageURL">
         <div class="numbertext">1 / 3</div>
-        <img src="../../../assets/media/academia/CATFLAg.jpg" style="width:100%">
+        <img src={{pic}} style="width:100%">
         <div class="text">Caption Text</div>
       </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="../../../assets/media/academia/CATFLAG_02.png" style="width:100%">
-        <div class="text">Caption Two</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="../../../assets/media/academia/CATFLAG_03.png" style="width:100%">
-        <div class="text">Caption Three</div>
-      </div>
-      
+         
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
       
