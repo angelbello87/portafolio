@@ -1,31 +1,27 @@
 <mat-card style="text-align:center">
-      <mat-card-title >{{title}}</mat-card-title>
+      <mat-card-title class="mat-card-title-margin" >{{title}}</mat-card-title>
       <mat-card-subtitle>{{comment}}</mat-card-subtitle>  
   <mat-card-content>
     <div class="slideshow-container" >
   
-      <div class="mySlides fade" *ngFor="let pic of imageURL">
-        <div class="numbertext">1 / 3</div>
+      <!--<div class="mySlides fade" *ngFor="let pic of imageURL"> -->
+      <div class="mySlides fade">
+        <div class="numbertext">{{imageindex+1}} / {{imageURL.length}}</div>
         <img src={{pic}} style="width:100%">
-        <div class="text">Caption Text</div>
+        <div class="text">{{comment}}</div>
       </div>
          
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" (click)="ChangePrevPic()">&#10094;</a>
+      <a class="next" (click)="ChangeNextPic()">&#10095;</a>
       
   </div>     
   </mat-card-content>
  
   <mat-card-footer>
     <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
+      <a *ngFor="let pic of imageURL"><span class="dot" (click)="ChangePic(pic)"></span></a>      
     </div>
   </mat-card-footer>
 </mat-card>
 
 <div ></div>
-      
-
-        
