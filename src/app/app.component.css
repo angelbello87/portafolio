@@ -13,8 +13,8 @@
   .herosmall
   {
       max-width: 100%;
-      height: 150px; 
-      content: url('../assets/media/logo.jpg');     
+      height: 50px; 
+      /*content: url('../assets/media/logo.jpg');     */
   }
 
   

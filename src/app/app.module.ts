@@ -4,6 +4,7 @@ import {MaterialModule} from './material/material.module';
 import { AppComponent } from './app.component';
 import { SlideimagesComponent } from './slideimages/slideimages.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollEventModule} from 'ngx-scroll-event';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ScrollEventModule
   ],
   providers: [],
   bootstrap: [AppComponent]

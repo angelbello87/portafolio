@@ -1,6 +1,6 @@
-<div class="toolbar" role="banner">
+<div class="toolbar" role="banner" >
   <div id="headerid" class="header">
-    <img id="heroimageId" class="heroimage" src="../assets/media/hero.jpg" alt="logo" aria-label="website logo">  
+    <img id="heroimageId" [ngClass]="topscroll ? 'heroimage' : 'herosmall'" src="../assets/media/hero.jpg" alt="logo" aria-label="website logo">  
     
     <div id="navbar">
         <a href="https://www.instagram.com/dsignlb/"> <img src="../assets/media/instagram-logo.jpg" aria-label="instagram" alt="instagram logo" height="42" width="42"> </a>
@@ -10,7 +10,7 @@
   </div>   
 </div>
 
-<div class="contentpadding" role="main">
+<div class="contentpadding" role="main" detect-scroll (onScroll)="onScroll($event)" [bottomOffset]="200" [topOffset]="150">
 
 <app-slideimages title="Academia" comment="Ademic Designs" imageRoute="../assets/media/academia/" imageCount=7>
 </app-slideimages>
