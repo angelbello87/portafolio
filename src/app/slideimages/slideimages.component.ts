@@ -30,8 +30,7 @@ export class SlideimagesComponent implements OnInit {
       this.imageURL.push(url); 
     }
     
-    this.pic = this.imageURL[this.imageindex];    
-    console.log(this.imageURL);
+    this.pic = this.imageURL[this.imageindex];        
   }
 
   public ChangeNextPic():void

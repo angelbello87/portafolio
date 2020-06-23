@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { ScrollEvent} from 'ngx-scroll-event';
 
 @Component({
@@ -6,7 +6,7 @@ import { ScrollEvent} from 'ngx-scroll-event';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-@HostListener('scroll',['$event'])
+
 export class AppComponent {
 
   topscroll:boolean;
@@ -16,7 +16,7 @@ export class AppComponent {
     this.topscroll = true;
   }
 
-  onScroll(event:ScrollEvent):void
+  Scroll(event:ScrollEvent):void
   {    
     if(event.isReachingTop)
     {
@@ -25,8 +25,7 @@ export class AppComponent {
     else
     {
       this.topscroll = false;
-    }
-    console.log(this.topscroll);
+    }    
   }
 }
 
