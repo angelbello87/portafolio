@@ -41,7 +41,7 @@ img {vertical-align: middle;}
 }
 
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 50%;
   position: relative;
   margin: auto;
 }
